@@ -16,3 +16,6 @@ y = math.degrees(x)
 print(y)
 
 print(round(y, 5))  # в градусах округлено до 5  символов после "."
+
+y = 85 / 180 * math.pi
+print(y)  # мануальный вариант
