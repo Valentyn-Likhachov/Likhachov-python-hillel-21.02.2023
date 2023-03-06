@@ -4,9 +4,9 @@ s2 = "".join(s1 for s1 in s1 if s1.strip(".,-:;?!"))  # удаляем все с
 print(s1)
 print(s2)
 
-s3 = input("With what do you want to replace?""\n")  # что мы хотим поменять в введённой ранее
-s4 = "Hello!, My name is ?-vAlentyn . I am learning Java!"  # Пример строки (s1) для поиска и замены слова
-print("was found at position", s4.find("Java"))  # Указываем слово которое хотим найти и заменить
+s3 = input("With what do you want to replace?""\n" )  # что мы хотим поменять в введённой ранее
+s4 = s1  # Пример строки (s1) для поиска и замены слова
+print("was found at position", s1.find(""))  # Указываем слово которое хотим найти и заменить
 
 s5 = input("With what do you want to replace?""\n")  # На что меняет указанное ранее слово
-print("Here is your result :""\n " + s2.replace("java", "python"))  # Выводим готовый результат преобразованной строки
+print("Here is your result :""\n " + s2.replace("hello", "hi"))  # Выводим готовый результат преобразованной строки
