@@ -1,12 +1,15 @@
-s1 = input("Pleas, input  you string?:")  # Вводим необходимую строку
-s1 = s1.lower()  # переводим в нижний регистр
-s2 = "".join(s1 for s1 in s1 if s1.strip(".,-:;?!"))  # удаляем все символы пунктуации и пробелы
+s1 = input("Pleas, input  you string?:")
+s1 = s1.lower()
+s2 = s1.replace(".", "").replace(",", "").replace("!", "").replace("?", "").replace(":", "").replace(";", "")
+s2 = s2.rstrip()
 print(s1)
-print(s2)
+print(s2.rstrip())
 
-s3 = input("With what do you want to replace?""\n" )  # что мы хотим поменять в введённой ранее
-s4 = s1  # Пример строки (s1) для поиска и замены слова
-print("was found at position", s1.find(""))  # Указываем слово которое хотим найти и заменить
+s3 = input("With what do you want to replace?""\n")
+s3 = s3.lower()
+s3 = s3.rstrip()
+print(f"Was found at position: {s1.find(s3)}")
 
-s5 = input("With what do you want to replace?""\n")  # На что меняет указанное ранее слово
-print("Here is your result :""\n " + s2.replace("hello", "hi"))  # Выводим готовый результат преобразованной строки
+s4 = input("With what do you want to replace? \n")
+s4 = s4.rstrip()
+print("Here is your result :""\n " + s2.replace(s3, s4))
